@@ -16,6 +16,7 @@
 		7B4469CC1CA3232300789924 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4469CB1CA3232300789924 /* PictureCollectionViewCell.m */; };
 		7B4469CF1CA3245C00789924 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4469CE1CA3245C00789924 /* Picture.m */; };
 		7B4469D31CA33FC600789924 /* CustomizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4469D21CA33FC600789924 /* CustomizationView.xib */; };
+		7B4469D61CA341E600789924 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4469D51CA341E600789924 /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		7B4469CD1CA3245C00789924 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		7B4469CE1CA3245C00789924 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		7B4469D21CA33FC600789924 /* CustomizationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizationView.xib; sourceTree = "<group>"; };
+		7B4469D41CA341E600789924 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		7B4469D51CA341E600789924 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				7B4469D21CA33FC600789924 /* CustomizationView.xib */,
 				7B4469CA1CA3232300789924 /* PictureCollectionViewCell.h */,
 				7B4469CB1CA3232300789924 /* PictureCollectionViewCell.m */,
+				7B4469D41CA341E600789924 /* CustomView.h */,
+				7B4469D51CA341E600789924 /* CustomView.m */,
 				7B4469CD1CA3245C00789924 /* Picture.h */,
 				7B4469CE1CA3245C00789924 /* Picture.m */,
 				7B4469BF1CA31D5C00789924 /* Assets.xcassets */,
@@ -168,6 +173,7 @@
 				7B4469CC1CA3232300789924 /* PictureCollectionViewCell.m in Sources */,
 				7B4469B81CA31D5C00789924 /* AppDelegate.m in Sources */,
 				7B4469B51CA31D5C00789924 /* main.m in Sources */,
+				7B4469D61CA341E600789924 /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

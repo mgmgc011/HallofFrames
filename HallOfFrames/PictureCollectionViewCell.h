@@ -7,20 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Picture.h"
+#import "CustomView.h"
 
-@class PictureCollectionViewCell;
+//@class PictureCollectionViewCell;
 
 
-@protocol PictureCollectionViewCellDelegate <NSObject>
+//@protocol PictureCollectionViewCellDelegate <NSObject>
 
-- (void)pictureCollectionViewCell:(PictureCollectionViewCell *)cell didTapButton:(UITapGestureRecognizer *)sender;
+//- (void)pictureCollectionViewCell:(PictureCollectionViewCell *)cell didTapButton:(UITapGestureRecognizer *)sender;
 
-@end
+//@end
 
 @interface PictureCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, assign) id<PictureCollectionViewCellDelegate>delegate;
+//@property (nonatomic, assign) id<PictureCollectionViewCellDelegate>delegate;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "Picture.h"
 #import "PictureCollectionViewCell.h"
+#import "CustomView.h"
 
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PictureCollectionViewCellDelegate>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, CustomViewDelegate>
 
 
 @property NSArray *pictureS;
@@ -40,26 +41,25 @@
 }
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    PictureCollectionViewCell *pictureCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
-    pictureCell.delegate =self;
+    PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
     
     Picture *picture = self.pictureS[indexPath.row];
-    pictureCell.imageView.image =picture.image;
-    pictureCell.backgroundColor = picture.frameColor;
+    cell.imageView.image =picture.image;
+    cell.backgroundColor = picture.frameColor;
     
 
     
-    return pictureCell;
+    return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"tapped");
         [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
-
+    
 }
 
--(void)pictureCollectionViewCell:(PictureCollectionViewCell *)cell didTapButton:(UITapGestureRecognizer *)sender {
-//    [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+
+-(void)customView:(CustomView *)view didTapButton:(UIButton *)button {
 }
 
 

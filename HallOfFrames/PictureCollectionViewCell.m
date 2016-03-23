@@ -11,8 +11,6 @@
 @implementation PictureCollectionViewCell
 
 
--(IBAction)onTapGesture:(UITapGestureRecognizer *)sender {
-    [self.delegate pictureCollectionViewCell:self didTapButton:sender];
-    
-}
+
+
 @end
