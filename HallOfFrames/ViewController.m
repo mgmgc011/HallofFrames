@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "Picture.h"
+#import "PictureCollectionViewCell.h"
 
-@interface ViewController ()
+
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PictureCollectionViewCellDelegate>
+
+
+@property NSArray *pictureS;
 
 @end
 
@@ -16,12 +22,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    Picture *p1 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Apple"] withFrameColor:[UIColor clearColor]];
+    Picture *p2 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"facebook"] withFrameColor:[UIColor clearColor]];
+    Picture *p3 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Google"] withFrameColor:[UIColor clearColor]];
+    Picture *p4 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Samsung"] withFrameColor:[UIColor clearColor]];
+    Picture *p5 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Twitter"] withFrameColor:[UIColor clearColor]];
+
+    
+    
+    self.pictureS = @[p1, p2, p3, p4, p5];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.pictureS.count;
 }
+
+-(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    PictureCollectionViewCell *pictureCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
+    pictureCell.delegate =self;
+    
+    Picture *picture = self.pictureS[indexPath.row];
+    pictureCell.imageView.image =picture.image;
+    pictureCell.backgroundColor = picture.frameColor;
+    
+
+    
+    return pictureCell;
+}
+
+-(void)pictureCollectionViewCell:(PictureCollectionViewCell *)cell didTapButton:(UITapGestureRecognizer *)sender {
+}
+
 
 @end
