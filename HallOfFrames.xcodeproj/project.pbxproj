@@ -15,6 +15,7 @@
 		7B4469C31CA31D5C00789924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4469C11CA31D5C00789924 /* LaunchScreen.storyboard */; };
 		7B4469CC1CA3232300789924 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4469CB1CA3232300789924 /* PictureCollectionViewCell.m */; };
 		7B4469CF1CA3245C00789924 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4469CE1CA3245C00789924 /* Picture.m */; };
+		7B4469D31CA33FC600789924 /* CustomizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4469D21CA33FC600789924 /* CustomizationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7B4469CB1CA3232300789924 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 		7B4469CD1CA3245C00789924 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		7B4469CE1CA3245C00789924 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		7B4469D21CA33FC600789924 /* CustomizationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7B4469B91CA31D5C00789924 /* ViewController.h */,
 				7B4469BA1CA31D5C00789924 /* ViewController.m */,
 				7B4469BC1CA31D5C00789924 /* Main.storyboard */,
+				7B4469D21CA33FC600789924 /* CustomizationView.xib */,
 				7B4469CA1CA3232300789924 /* PictureCollectionViewCell.h */,
 				7B4469CB1CA3232300789924 /* PictureCollectionViewCell.m */,
 				7B4469CD1CA3245C00789924 /* Picture.h */,
@@ -148,6 +151,7 @@
 			files = (
 				7B4469C31CA31D5C00789924 /* LaunchScreen.storyboard in Resources */,
 				7B4469C01CA31D5C00789924 /* Assets.xcassets in Resources */,
+				7B4469D31CA33FC600789924 /* CustomizationView.xib in Resources */,
 				7B4469BE1CA31D5C00789924 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
