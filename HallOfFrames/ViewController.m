@@ -53,6 +53,7 @@
 }
 
 -(void)pictureCollectionViewCell:(PictureCollectionViewCell *)cell didTapButton:(UITapGestureRecognizer *)sender {
+    [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
 }
 
 
