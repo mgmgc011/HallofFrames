@@ -93,6 +93,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="pictureCollectionView" destination="Zog-iT-Q9z" id="cE0-uM-S4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

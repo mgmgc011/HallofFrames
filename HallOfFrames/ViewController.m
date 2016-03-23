@@ -15,6 +15,7 @@
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, CustomViewDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UICollectionView *pictureCollectionView;
 @property NSArray *pictureS;
 
 @end
@@ -47,19 +48,33 @@
     cell.imageView.image =picture.image;
     cell.backgroundColor = picture.frameColor;
     
-
-    
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"tapped");
-        [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    
+    PictureCollectionViewCell *cell = (PictureCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    CustomView *view = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    view.delegate = self;
+
+    [cell addSubview:view];
     
 }
 
 
 -(void)customView:(CustomView *)view didTapButton:(UIButton *)button {
+    NSIndexPath *indexPath = [[self.pictureCollectionView indexPathsForSelectedItems] firstObject];
+    Picture *picture = self.pictureS[indexPath.row];
+    if ([button.currentTitle isEqualToString:@"RED"]) {
+        picture.frameColor = [UIColor redColor];
+    } else if ([button.currentTitle isEqualToString:@"GREEN"])
+        picture.frameColor = [UIColor greenColor];
+    else {
+        picture.frameColor = [UIColor blueColor];
+    }
+    
+    [self.pictureCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
 
 

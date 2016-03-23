@@ -18,13 +18,8 @@
 }
 */
 - (IBAction)onColorTapped:(UIButton *)sender {
-    if ([sender.titleLabel.text isEqualToString: @"RED"]) {
-        [UIColor redColor];
-    } else if ([sender.titleLabel.text isEqualToString:@"GREEN"])
-        [UIColor greenColor];
-    else {
-        [UIColor blueColor];
-    }
+    [self.delegate customView:self didTapButton:sender];
+    
 }
 
 
