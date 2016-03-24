@@ -24,11 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Picture *p1 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Apple"] withFrameColor:[UIColor clearColor]];
-    Picture *p2 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"facebook"] withFrameColor:[UIColor clearColor]];
-    Picture *p3 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Google"] withFrameColor:[UIColor clearColor]];
-    Picture *p4 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Samsung"] withFrameColor:[UIColor clearColor]];
-    Picture *p5 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Twitter"] withFrameColor:[UIColor clearColor]];
+    Picture *p1 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Apple"] withFrameColor:[UIColor whiteColor]];
+    Picture *p2 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"facebook"] withFrameColor:[UIColor whiteColor]];
+    Picture *p3 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Google"] withFrameColor:[UIColor whiteColor]];
+    Picture *p4 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Samsung"] withFrameColor:[UIColor whiteColor]];
+    Picture *p5 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Twitter"] withFrameColor:[UIColor whiteColor]];
 
     
     
@@ -55,11 +55,11 @@
     NSLog(@"tapped");
     
     PictureCollectionViewCell *cell = (PictureCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    CustomView *view = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    CustomView *view = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:indexPath.row];
     view.delegate = self;
 
     [cell addSubview:view];
-    
+    view.center = cell.center;
 }
 
 
